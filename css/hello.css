@@ -1,7 +1,7 @@
 body {
 	font-size: 100%;
 	font-family: Helvetica, Arial, sans-serif;
-	color: #888;
+	color: #777;
 	background-color: #FFF;
 	font-size: 2.5em;
 	padding: 50px;
@@ -12,4 +12,8 @@ body {
 a { color: #3399FF; text-decoration: none; }
 a:hover { color: #FF9900; text-decoration: none; }
 
-.title { color: #000; font-size: 150%; }
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+.title { color: #333; font-size: 150%; }
