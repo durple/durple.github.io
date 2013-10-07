@@ -5,14 +5,12 @@ body {
 	background-color: #FFF;
 	font-size: 2.5em;
 	padding: 50px;
-	//background-image:url('/img/gradient.jpeg');
-	background-repeat:repeat-x;
 }
 
-a { color: #3399FF; text-decoration: none; }
+a { color: #3399FF; text-decoration: none; transition: color 0.15s linear; }
 a:hover { color: #FF9900; text-decoration: none; }
 
-* {
+body, p, h1 {
 	-webkit-font-smoothing: antialiased;
 }
 
