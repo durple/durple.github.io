@@ -6,8 +6,7 @@ body {
 	background-color: #FFF;
 	font-size: 2.5em;
 	padding: 50px;
-	//background-image:url('/img/gradient.jpeg');
-	background-repeat:repeat-x;
+	max-width: 500px;
 }
 
 a { color: #3399FF; text-decoration: none; }
