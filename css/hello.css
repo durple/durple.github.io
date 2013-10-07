@@ -9,10 +9,10 @@ body {
 	max-width: 500px;
 }
 
-a { color: #3399FF; text-decoration: none; }
+a { color: #3399FF; text-decoration: none; transition: color 0.15s linear; }
 a:hover { color: #FF9900; text-decoration: none; }
 
-* {
+body, p, h1 {
 	-webkit-font-smoothing: antialiased;
 }
 
