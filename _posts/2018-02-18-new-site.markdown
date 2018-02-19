@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "New Site"
+date:   2018-02-18 23:48:44 -0500
+---
+I had been hosting this site on GitHub pages for sometime but I had been feeling quite glum about a few things. GitHub pages did not support HTTPS for my custom domain and neither was it fronted by a CDN (although I do belive GitHub pages might be using Fastly) that I had some control over. One other thing that had been bugging me was the fact that because the site was largely static HTML, I did not update it often because I was lazy. 
+
+I took some time today to move my nameservers over to a new CDN that also supports getting a free SSL cert and put my site behind the CDN. Feel much better now since we did this [at my work about a year ago][nyt-https]. I just had to catch up.
+
+A quick `dig` confirms the site is moved over to the new DNS since it is using the new nameservers from the CDN.
+
+{% highlight bash %}
+$ dig deepkapadia.com +noall +answer
+
+; <<>> DiG 9.10.3-P4-Ubuntu <<>> deepkapadia.com +noall +answer
+;; global options: +cmd
+deepkapadia.com.	163	IN	A	104.31.71.130
+deepkapadia.com.	163	IN	A	104.31.70.130
+
+{% endhighlight %}
+
+Plus, I have been wanting to try out a static site generator like [Jekyll][jekyll] for some time which is supported by [GitHub pages][jekyll-gh]. Although the one that I'd really love to try someday is [Hugo][hugo].
+
+I also hope that given these changes, I'll be more diligent and encouraged to document my thoughts (and probably happenings with my life) a bit more since it is something I wish I'd do more but find excuses to not do so.
+
+[nyt-https]: https://open.nytimes.com/https-on-nytimes-com-ed04bca88ed6
+[jekyll]: https://jekyllrb.com
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[hugo]: https://gohugo.io/
