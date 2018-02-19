@@ -11,7 +11,7 @@ github_username:  durple
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: slate
 plugins:
   - jekyll-feed
 
