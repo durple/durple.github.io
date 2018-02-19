@@ -4,7 +4,6 @@ description: >- # this means to ignore newlines until "baseurl:"
     I work at The New York Times. I solve problems with help of people and code.
     I am currenty managing a team of SRE's and automation engineers. 
     When I am not working, I am a struggling dad and husband. 
-    I grew up in Delhi and Mumbai, and now live in Hoboken, NJ.
 baseurl: "/" 
 url: "https://deepkapadia.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: durple
