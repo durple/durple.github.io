@@ -5,9 +5,11 @@ date:   2018-02-18 23:48:44 -0500
 ---
 I had been hosting this site on GitHub pages for sometime but I had been feeling quite glum about a few things. GitHub pages did not support HTTPS for my custom domain and neither was it fronted by a CDN (although I do belive GitHub pages might be using Fastly) that I had some control over. One other thing that had been bugging me was the fact that because the site was largely static HTML, I did not update it often because I was lazy. 
 
-I took some time today to move my nameservers over to a new CDN that also supports getting a free SSL cert and put my site behind the CDN. Feel much better now since we did this [at my work about a year ago][nyt-https]. I just had to catch up.
+I took some time today to move my nameservers over to a Cloudflare and start using it as a CDN. I found some [instructions][cloudflare-gh-pages] on the Cloudflare site. Cloudflare also supports getting a ["free" SSL cert][cloudflare-mitm] if you use their service. I feel much better now since my team and I did the work to move [nytimes.com behind a CDN and serve it over HTTPS][nyt-https], last year. I just had to catch up.
 
-A quick `dig` confirms the site is moved over to the new DNS since it is using the new nameservers from the CDN.
+Now, there are [some documented issues][cloudflare-issues] with my approach. I still went ahead with this for the time being. The key here is to ensure that you enable SSL on your origin behind your CDN too. While that is currently not possible with GitHub pages when serving a custom domain, it does get enforced in a roundabout way with `mysite.github.io` being redirected to my custom domain which then redirects to the HTTPS site.  As always, security is never foolproof and there are weak links somewhere along the chain but this is a step in the right direction vs. serving unencrypted.
+
+A quick `dig` confirms the site is moved over to the new DNS since it is using the new nameservers from Cloudflare.
 
 {% highlight bash %}
 $ dig deepkapadia.com +noall +answer
@@ -19,10 +21,13 @@ deepkapadia.com.	163	IN	A	104.31.70.130
 
 {% endhighlight %}
 
-Plus, I have been wanting to try out a static site generator like [Jekyll][jekyll] for some time which is supported by [GitHub pages][jekyll-gh]. Although the one that I'd really love to try someday is [Hugo][hugo].
+Plus, I have been wanting to try out a static site generator like [Jekyll][jekyll] for some time which is supported by [GitHub pages][jekyll-gh]. Although the one that I'd really love to try someday is [Hugo][hugo]. I just went with the lowest barrier to entry here.
 
 I also hope that given these changes, I'll be more diligent and encouraged to document my thoughts (and probably happenings with my life) a bit more since it is something I wish I'd do more but find excuses to not do so.
 
+[cloudflare-gh-pages]: https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/
+[cloudflare-mitm]: https://scotthelme.co.uk/tls-conundrum-and-leaving-cloudflare/
+[cloudflare-issues]: https://www.troyhunt.com/cloudflare-ssl-and-unhealthy-security-absolutism/
 [nyt-https]: https://open.nytimes.com/https-on-nytimes-com-ed04bca88ed6
 [jekyll]: https://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
