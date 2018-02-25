@@ -1,11 +1,14 @@
 ---
 ---
 
-
 @import "{{ site.theme }}";
 
 a:hover, a:focus {
   text-decoration: underline;
   font-weight: normal
 }
+#project_title {
+	text-decoration: none;
+}
+
 
