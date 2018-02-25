@@ -11,7 +11,7 @@ I am an average programmer. I keep telling myself that someday I will write bett
 
 I am also love watching sports and am an average club cricketer.
 
-I live in [Hoboken NJ][hoboken]. I grew up in [Delh][delhi] and [Mumbai][mumbai]. 
+I live in [Hoboken NJ][hoboken]. I grew up in [Delhi][delhi] and [Mumbai][mumbai]. 
 
 [nytimes]: https://www.nytimes.com/
 [hoboken]: https://en.wikipedia.org/wiki/Hoboken%2C_New_Jersey 
