@@ -12,3 +12,5 @@ theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 show_excerpts: true
+
+google_analytics: UA-25156822-1
