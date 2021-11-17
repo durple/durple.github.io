@@ -8,7 +8,7 @@ github_username:  durple
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-slate
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 show_excerpts: true
